@@ -8,15 +8,13 @@ A complete, modular Discord bot (discord.js v14) designed for EverQuest communit
 
 ## ⚡ Slash Commands & Features
 
-### 1. `/g-add [item_name]`
+### 1. `/g-add [item_name] [upgrade level]`
 - **Live Autocomplete:** Queries the MediaWiki opensearch API on `eqlwiki.com` as you type, offering real-time suggestions.
-- **Suffix Parsing:** Automatically parses and strips upgrade suffixes from `+1` to `+10`. If omitted, defaults to `+0`.
-  - Example: `/g-add item_name: Spurned Initiate Robe +3` registers Base Item: `Spurned Initiate Robe` and Upgrade Level: `+3`.
 - **Page Validation:** Validates that the base item page exists on `eqlwiki.com` and is not empty (`.noarticletext` check).
 - **Contributor Tracking:** Automatically logs the contributor's Discord ID, display name, and timestamp.
 
 ### 2. `/g-stock [item_name] [quantity]`
-- **Batch Drop Stacking:** Designed for stocking multiples of common un-upgraded gear drops, armor pieces, or materials (`x1` to `x1000`).
+- **Batch Drop Stacking:** Designed for stocking multiples of common stacking materials (`x1` to `x1000`).
 
 ### 3. `/g10 [item_name]`
 - **Quick Max Tier Viewer:** Directly inspect or render an item scaled to its maximum `+10` upgrade tier in a single command.
@@ -34,7 +32,7 @@ A complete, modular Discord bot (discord.js v14) designed for EverQuest communit
 
 ### 5. `/g-card [item_name]`
 - **Wiki Card Extraction:** Fetches `https://eqlwiki.com/wiki/<Item_Name>`, extracts `div.ils-item-wrapper`, injects eqlwiki CSS styles, and renders a crisp PNG image using `node-html-to-image` (Puppeteer/Chromium).
-- **Interactive Level Slider:** Discord action row buttons (`◀ Lower Level`, `Level: +X`, `Higher Level ▶`) allow users to step through upgrade tiers (`+0` to `+10`) and re-render the card dynamically.
+- **Dropdown Level Selector:** Choose from the upgrade tiers (`+0` to `+10`) and re-render the card dynamically.
 
 ---
 
@@ -90,6 +88,10 @@ CLIENT_ID=your_discord_client_id_here
 GUILD_ID=your_optional_testing_guild_id_here
 AUTHORIZED_ROLE_IDS=123456789012345678,987654321098765432
 ```
+
+### 2.5 Configure Guild Branding
+**Location:** commands/gList.js **line** 35
+The text within the quotes is the entirety of the guild branding in this app.
 
 ### 3. Install Dependencies & Launch
 ```bash
