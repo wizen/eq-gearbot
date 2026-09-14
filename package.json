@@ -1,0 +1,21 @@
+{
+  "name": "eq-gear-bot",
+  "version": "1.0.0",
+  "description": "EverQuest Legends community gear list manager with wiki card rendering",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "better-sqlite3": "^11.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "discord.js": "^14.15.0",
+    "dotenv": "^16.4.5",
+    "puppeteer": "^25.10.0"
+  },
+  "allowScripts": {
+    "better-sqlite3": true,
+    "puppeteer": true
+  }
+}
