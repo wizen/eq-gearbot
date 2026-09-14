@@ -1,6 +1,6 @@
-# 🛡️ EQ Gear Bot — Discord Gear Inventory & eqlwiki Card Renderer
+# 🛡️ EQ Legends Gear Bot — Discord Gear Inventory & eqlwiki Card Renderer
 
-A complete, modular Discord bot (discord.js v14) designed for EverQuest communities to track volunteer gear inventory, upgrade suffixes (`+1` to `+10`), and render high-resolution item cards directly from [eqlwiki.com](https://eqlwiki.com) with interactive level sliders.
+A complete, modular Discord bot (discord.js v14) designed for EverQuest Legends communities to track volunteer gear inventory, upgrade suffixes (`+1` to `+10`), and render high-resolution item cards directly from [eqlwiki.com](https://eqlwiki.com) with interactive level sliders.
 
 ---
 
