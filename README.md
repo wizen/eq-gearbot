@@ -18,7 +18,7 @@ A complete, modular Discord bot (discord.js v14) designed for EverQuest communit
 ### 2. `/g-stock [item_name] [quantity]`
 - **Batch Drop Stacking:** Designed for stocking multiples of common un-upgraded gear drops, armor pieces, or materials (`x1` to `x1000`).
 
-### 3. `/g-plus10 [item_name]`
+### 3. `/g10 [item_name]`
 - **Quick Max Tier Viewer:** Directly inspect or render an item scaled to its maximum `+10` upgrade tier in a single command.
 
 ### 4. `/g-list`
