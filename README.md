@@ -6,18 +6,23 @@ A complete, modular Discord bot (discord.js v14) designed for EverQuest Legends 
 
 ## ⚡ Features
 
-- **/g-add [item_name]**:
+- **/g-add [item_name] [upgrade_level]**:
   - Live MediaWiki opensearch autocomplete directly against eqlwiki.com.
   - Automatic upgrade suffix parsing (`+0` to `+10`).
   - Strict wiki page validation (rejects invalid/missing pages).
   - Automatically records submitter details (`added_by_user_id`, `added_by_username`) and timestamp in SQLite.
+- **/g-stock [item_name] [quantity]**:
+  - Designed for stocking stackable items (`x1` to `x1000`).
 - **/g-list**:
-  - Neatly aligned Discord Markdown table output (`ID`, `Item Name`, `Lvl`, `Held By`, `Requested By`).
-  - Interactive buttons dynamically tailored to the viewing user:
-    - `[ 🔍 Card #ID ]`: Ephemeral popup rendering the item card at its stored upgrade level.
-    - `[ ❌ Remove #ID ]`: **Only displayed for and executable by the user who added the item**.
-    - `[ ✋ Request #ID ]`: Displayed to other users when an item is unclaimed to register their desire to claim the item.
-    - `[ ↩ Withdraw #ID ]`: Displayed exclusively to the user who claimed the item, allowing them to release their claim so another member can request it.
+  - **Paginated Numbered Inventory:** Neatly lists stored items with 10 entries per page.
+  - **Dual-Dropdown Discord Interface:**
+    - **Dropdown 1 (Item Selection):** Choose an item from the current page.
+    - **Dropdown 2 (Action Menu):** Context-aware options dynamically based on item state and viewer identity:
+      - `👁️ View Item Wiki Card`: Generates an ephemeral preview of the item card rendered at its stored upgrade level.
+      - `✋ Claim Item`: Allows any guild member to claim an unassigned piece of gear.
+      - `↩️ Withdraw Claim`: Displayed exclusively to the user who claimed the item, letting them return it to the community pool.
+      - `🗑️ Remove Item`: Available to the original donor or authorized Guild Officers (`AUTHORIZED_ROLE_IDS` or Administrator).
+  - **Sequential ID Compaction:** Whenever an item is deleted from the database, remaining items are automatically re-indexed continuously from 1 to N without missing ID gaps.
 - **/g-card [item_name]**:
   - Scrapes `div.ils-item-wrapper` and renders clean PNG card with eqlwiki stylesheet.
   - Interactive slider buttons (`◀ Lower Level`, `Level: +X`, `Higher Level ▶`) to adjust the upgrade tier in real-time.
