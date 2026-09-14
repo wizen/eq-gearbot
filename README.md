@@ -48,6 +48,10 @@ CLIENT_ID=123456789012345678
 GUILD_ID=123456789012345678   # Optional: set for instant slash command registration during testing
 AUTHORIZED_ROLE_IDS=987654321098765432,123456789012345678  # Roles allowed to delete items
 ```
+  #### 2.5 Configure Guild Branding
+  1. Open commands/gList.js in a text editor, and browse to line 35.
+  2. Change YOUR_GUILD_BRANDING_HERE to your desired list title.
+
 
 ### 3. Install & Run Locally
 ```bash
