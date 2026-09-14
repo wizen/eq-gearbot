@@ -21,6 +21,8 @@ A complete, modular Discord bot (discord.js v14) designed for EverQuest communit
 - **/g-card [item_name]**:
   - Scrapes `div.ils-item-wrapper` and renders clean PNG card with eqlwiki stylesheet.
   - Interactive slider buttons (`◀ Lower Level`, `Level: +X`, `Higher Level ▶`) to adjust the upgrade tier in real-time.
+- **/g10 [item_name]**:
+  - Display card for an item at its +10 upgrade level, for quick reference.
 
 ---
 
